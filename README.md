@@ -29,3 +29,11 @@ Hierarchy: International → National → Zone → Local church → Society / De
 
 ## Search ("IDDI AI")
 Internal only: searches the app's own records (sermons, agreements, documents, letters, circulars) with exact links to the source. No outside AI service is connected.
+
+## Run it and test it
+
+- It is a static site (no build step). Locally: `python3 -m http.server 8080` and open http://localhost:8080.
+- Browser test with a stand-in database: `NODE_PATH=$(npm root -g) node tests/ui.test.mjs` (needs Playwright).
+  It signs in as a Local Secretary, the Master Administrator and a Society Secretary and walks every section.
+- Sign-in uses Google through the shared Supabase project. Add each new site address to
+  Supabase → Authentication → URL Configuration → Redirect URLs.
