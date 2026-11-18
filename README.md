@@ -10,7 +10,7 @@ Secretarial and ministerial management for the IDDI apps hub.
 ## What's here today
 - `supabase/migrations/` — database changes for Secretaría:
   - `per_app_roles_foundation` — roles per app on the shared sign-in (**applied 18 Nov 2026**).
-  - `secretaria_core` — sermons, letters, doctrinal documents, agreements, circulars, files, search, trends (**pending approval**).
+  - `secretaria_core` — sermons, letters, doctrinal documents, agreements, circulars, files, search, trends (**applied 18 Nov 2026**).
 - `docs/` — plan and decisions.
 
 The frontend comes next, copied from the Finance app's shell (Google sign-in, opening screen, daisyUI navy/gold, ES/EN, installable app).
