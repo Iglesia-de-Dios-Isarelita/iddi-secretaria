@@ -16,7 +16,7 @@ const byOrg = (q, ids, col = "organization_id") => (ids && ids.length ? (ids.len
 export const auth = {
   session: async () => must(await sb.auth.getSession()).session,
   onChange: (cb) => sb.auth.onAuthStateChange((event, session) => cb(event, session)),
-  signIn: () => sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: location.origin + location.pathname, queryParams: { prompt: "select_account" } } }),
+  signIn: () => sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: location.origin + (location.pathname === "/" ? "" : location.pathname), queryParams: { prompt: "select_account" } } }),
   signOut: () => sb.auth.signOut(),
 };
 
